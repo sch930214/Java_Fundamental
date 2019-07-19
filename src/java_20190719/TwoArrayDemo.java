@@ -30,7 +30,7 @@ public class TwoArrayDemo {
 		}
 		
 		//enhanced for loop, °£Æí~
-		
+		//\t => tap
 		for(int temp : c) {
 			System.out.print(temp+"\t");
 		}

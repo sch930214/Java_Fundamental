@@ -4,7 +4,7 @@ public class ArrayCopyDemo {
 	public static void main(String[] args) {
 		String[] fruits = {"apple", "banana", "watermelon", "blueberry"};
 		
-		String[] temp = new String[6];
+		String[] temp = new String[6];  //문자열 String 정수 int 
 		
 		//fruits => 원본배열
 		//0 => 원본배열의 위치 즉, 원본배열 복사 시작 위치
