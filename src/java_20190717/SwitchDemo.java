@@ -30,6 +30,7 @@ public class SwitchDemo {
 		default:
 			season = "없는 계절";
 		}
+		
 		// printf - pg.36
 		// 녹색화살표 - Run configurations - Arguments - Program Arguments에 수치 입력
 		System.out.printf("%d월은 %s입니다.", month, season);

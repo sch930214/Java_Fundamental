@@ -23,7 +23,7 @@ public class LotteryDemo {
 				//i==1 아래의 for loop는 1번 반복
 				//i==2 아래의 for loop는 2번 반복
 				//i==3 아래의 for loop는 3번 반복.....
-				for (int j = 0; j<i; j++) {
+				for (int j = 0; j<i; j++) {                           //자기 인덱스보다 이전꺼 비교할 때 j<i
 					if(lotto[j]==temp) {
 						//새로 생성한 temp와 이전 배열의 값을 비교해서 같은 값이 존재하면 
 						isExisted = true;
