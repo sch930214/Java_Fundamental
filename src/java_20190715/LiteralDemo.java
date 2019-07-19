@@ -2,33 +2,33 @@ package java_20190715;
 
 public class LiteralDemo {
 	public static void main(String[] args) {
-		//byte ¹üÀ§¸¦ ³Ñ¾î°¡¸é ÄÄÆÄÀÏ ¿¡·¯¹ß»ı
+		//byte ë²”ìœ„ë¥¼ ë„˜ì–´ê°€ë©´ ì»´íŒŒì¼ ì—ëŸ¬ë°œìƒ
 		//byte a1 = (byte)128;
-		int a1 = 128;//10Áø¼ö Ç¥±â¹ı
-		int a2 = 076;//8Áø¼ö Ç¥±â¹ı
-		int a3 = 0x123;//16Áø¼ö Ç¥±â¹ı
+		int a1 = 128;//10ì§„ìˆ˜ í‘œê¸°ë²•
+		int a2 = 076;//8ì§„ìˆ˜ í‘œê¸°ë²•
+		int a3 = 0x123;//16ì§„ìˆ˜ í‘œê¸°ë²•
 		System.out.println(a1);
 		System.out.println(a2);
 		System.out.println(a3);
 		
-		//long ¸®ÅÍ·²Àº ¼ıÀÚ µÚ¿¡ l, L·Î Ç¥±âÇÔ.
+		//long ë¦¬í„°ëŸ´ì€ ìˆ«ì ë’¤ì— l, Lë¡œ í‘œê¸°í•¨.
 		long a4 = 1L;
 		
-		//float ¸®ÅÍ·²Àº ¼Ò¼öÁ¡ µÚ¿¡ f, F·Î Ç¥±â
+		//float ë¦¬í„°ëŸ´ì€ ì†Œìˆ˜ì  ë’¤ì— f, Fë¡œ í‘œê¸°
 		float f1 = 1234.43f;
-		//double ¸®ÅÍ·²Àº ¼Ò¼öÁ¡ µÚ¿¡ d, D·Î Ç¥±â È¤Àº »ı·«°¡´É
+		//double ë¦¬í„°ëŸ´ì€ ì†Œìˆ˜ì  ë’¤ì— d, Dë¡œ í‘œê¸° í˜¹ì€ ìƒëµê°€ëŠ¥
 		double d1 = 123455.56d;
 		
-		//boolean ¸®ÅÍ·²Àº  true, false
+		//boolean ë¦¬í„°ëŸ´ì€  true, false
 		boolean isExisted = false;
 		
 		a1 = 10;
 		d1 = 10.0d;
-		//primitive data typeÀÇ == ¿¬»êÀÚ´Â °ª¸¸ ºñ±³ÇÔ.
+		//primitive data typeì˜ == ì—°ì‚°ìëŠ” ê°’ë§Œ ë¹„êµí•¨.
 		System.out.println(a1==d1);
 		
 		int b1 = 10;
-		//b2dp b1ÀÇ °ªÀÎ 10À» ÇÒ´ç.
+		//b2dp b1ì˜ ê°’ì¸ 10ì„ í• ë‹¹.
 		int b2 = b1;
 		b2 = 20;
 		System.out.println(b1);

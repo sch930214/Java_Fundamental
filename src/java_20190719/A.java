@@ -1,15 +1,16 @@
 package java_20190719;
-//publicÀº (È®ÀåÀÚ¸¦ »«) ÆÄÀÏÀÌ¸§°ú µ¿ÀÏÇÑ Å¬·¡½º¿¡¸¸ Ãß°¡ÇÒ ¼ö ÀÖ´Ù. ex.A
+//publicì€ (í™•ì¥ìë¥¼ ëº€) íŒŒì¼ì´ë¦„ê³¼ ë™ì¼í•œ í´ë˜ìŠ¤ì—ë§Œ ì¶”ê°€í•  ìˆ˜ ìˆë‹¤. ex.A
 public class A {
 	String name;
 	int age;
 	
 	public void m() {
-		System.out.println("m() ¸Ş¼­µå");
+		System.out.println("m() ë©”ì„œë“œ");
 	}
+	
 	public static void main(String[] args) {
 		A a = new A();
-		a.name = "¼º¿µÇÑ"
+		a.name = "ì„±ì˜í•œ";
 		a.age = 20;
 		
 		System.out.println(a.name);
@@ -19,19 +20,19 @@ public class A {
 	}
 }
 
-	public static void main(String[] args) {
+	/*public static void main(String[] args) {
 		System.out.println("Hello1");
 
 
 class B{
 	{
-	/* publicÀÌ ¿©±â ÀÖÀ¸¸é ½ÇÇà¾ÈµÊ.
+	/* publicì´ ì—¬ê¸° ìˆìœ¼ë©´ ì‹¤í–‰ì•ˆë¨.
 	public static void main(String[] args) {
 		System.out.println("Hello");
 	*/ //	
 		
-		//main ¸Ş¼­µå°¡ ½ÇÇàµÇ±â À§ÇØ¼­´Â  publicÀÌ Ãß°¡µÈ Å¬·¡½º¾Ö¼­¸¸ ÀÛµ¿µÊ
-		//main ¸Ş¼­µå°¡ ½ÇÇàµÇ±â À§ÇØ¼­´Â  ÆÄÀÏÀÌ¸§°ú µ¿ÀÏÇÑ Å¬·¡½º¾Ö¼­¸¸ ÀÛµ¿µÊ
+		//main ë©”ì„œë“œê°€ ì‹¤í–‰ë˜ê¸° ìœ„í•´ì„œëŠ”  publicì´ ì¶”ê°€ëœ í´ë˜ìŠ¤ì• ì„œë§Œ ì‘ë™ë¨
+		//main ë©”ì„œë“œê°€ ì‹¤í–‰ë˜ê¸° ìœ„í•´ì„œëŠ”  íŒŒì¼ì´ë¦„ê³¼ ë™ì¼í•œ í´ë˜ìŠ¤ì• ì„œë§Œ ì‘ë™ë¨
 		
 		
 	

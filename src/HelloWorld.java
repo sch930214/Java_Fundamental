@@ -1,9 +1,9 @@
-//ÆÄÀÏ »õ·Î ¸¸µé±â => ctl + n
-//ÆíÁý±â È®Àå => ctl + m
-//ÇÑ ÁÙ º¹»çÈÄ ¾Æ·¡·Î ºÙ¿©³Ö±â => ctl + alt + down arrow
-//ÇÑ ÁÙ Áö¿ì±â => ctl + d
-//ÇÑ ÁÙ À§¾Æ·¡·Î ¿òÁ÷ÀÌ±â => alt + down arrow or up arrow
-//½ÇÇà => ctl + f11
+//íŒŒì¼ ìƒˆë¡œ ë§Œë“¤ê¸° => ctl + n
+//íŽ¸ì§‘ê¸° í™•ìž¥ => ctl + m
+//í•œ ì¤„ ë³µì‚¬í›„ ì•„ëž˜ë¡œ ë¶™ì—¬ë„£ê¸° => ctl + alt + down arrow
+//í•œ ì¤„ ì§€ìš°ê¸° => ctl + d
+//í•œ ì¤„ ìœ„ì•„ëž˜ë¡œ ì›€ì§ì´ê¸° => alt + down arrow or up arrow
+//ì‹¤í–‰ => ctl + f11
 public class HelloWorld {
 	public static void main(String[] args) {
 		System.out.println("hello world");

@@ -2,17 +2,17 @@ package java_20190718;
 
 public class ArrayDemo {
 	public static void main(String[] args) {
-		//int ¹è¿­ ¼±¾ð
+		//int ë°°ì—´ ì„ ì–¸
 		
 		int[] a = new int[4];
 		
-		//int ¹è¿­ ÇÒ´ç
+		//int ë°°ì—´ í• ë‹¹
 		a[0] = 100;
 		a[1] = 200;
 		a[2] = 300;
 		a[3] = 400;
 		
-		//int ¹è¿­ Ãâ·Â
+		//int ë°°ì—´ ì¶œë ¥
 		int sum = 0;
 		for(int i=0; i<a.length; i++) {
 			int temp = a[i];
@@ -21,24 +21,24 @@ public class ArrayDemo {
 			
 			
 		}
-		System.out.printf("¹è¿­ÀÇ ÃÑÇÕÀº %d ÀÔ´Ï´Ù.%n", sum);
+		System.out.printf("ë°°ì—´ì˜ ì´í•©ì€ %d ìž…ë‹ˆë‹¤.%n", sum);
 		
 		
-		//¹è¿­ »ý¼º°ú ÇÒ´çÀÌ µ¿½Ã¿¡ ÀÌ·ç¾îÁü
+		//ë°°ì—´ ìƒì„±ê³¼ í• ë‹¹ì´ ë™ì‹œì— ì´ë£¨ì–´ì§
 		int[] b = {1000, 2000, 3000, 4000};
 		
-		//ÀÌ·± ½ÄÀ¸·Î ¹è¿­ ¾ÈÀÇ ¼öÄ¡ º°°³·Î º¯°æ °¡´É(ÀçÇÒ´ç) - ¹è¿­ÀÇ °ª º¯°æ(ÇÒ´ç)
+		//ì´ëŸ° ì‹ìœ¼ë¡œ ë°°ì—´ ì•ˆì˜ ìˆ˜ì¹˜ ë³„ê°œë¡œ ë³€ê²½ ê°€ëŠ¥(ìž¬í• ë‹¹) - ë°°ì—´ì˜ ê°’ ë³€ê²½(í• ë‹¹)
 		b[0] = 1;
 		b[1] = 2;
 		
-		//¹è¿­ÀÇ Ãâ·Â(´Ü¼ø¹æ½Ä)
+		//ë°°ì—´ì˜ ì¶œë ¥(ë‹¨ìˆœë°©ì‹)
 		System.out.println(b[0]);
 		System.out.println(b[1]);
 		System.out.println(b[2]);
 		System.out.println(b[3]);
 		
-		//for loop¸¦ È°¿ëÇÑ ¹è¿­ÀÇ Ãâ·Â
-		for(int i=0; i<b.length; i++) {       //for ctrl+spaceÇÏ¸é ÄÚµå³»¿ë ½Ï ³ª¿È.
+		//for loopë¥¼ í™œìš©í•œ ë°°ì—´ì˜ ì¶œë ¥
+		for(int i=0; i<b.length; i++) {       //for ctrl+spaceí•˜ë©´ ì½”ë“œë‚´ìš© ì‹¹ ë‚˜ì˜´.
 			System.out.println(b[i]);
 		}
 	}

@@ -2,7 +2,7 @@ package java_20190715;
 
 public class CharLiteralDemo {
 	public static void main(String[] args) {
-		//char literalÀÇ À¯´ÏÄÚµå Ç¥Çö => '\u0000'
+		//char literalì˜ ìœ ë‹ˆì½”ë“œ í‘œí˜„ => '\u0000'
 		char c1 = '\uc190';
 		char c2 = '\uc815';
 		char c3 = '\ud6c8';
@@ -10,15 +10,15 @@ public class CharLiteralDemo {
 		System.out.println(c2);
 		System.out.println(c3);
 		
-		//char literalÀÇ ¾Æ½ºÅ°ÄÚµå Ç¥Çö => 65
+		//char literalì˜ ì•„ìŠ¤í‚¤ì½”ë“œ í‘œí˜„ => 65
 		
 		char c4 = 65;
 		System.out.println(c4);
-		//char literal ¾Æ½ºÅ°ÄÚµå 48 = 0
+		//char literal ì•„ìŠ¤í‚¤ì½”ë“œ 48 = 0
 		char c8 = 48;
 		System.out.println(c8);
 		
-		//char literalÀÇ ¹®ÀÚÇ¥Çö => ''
+		//char literalì˜ ë¬¸ìží‘œí˜„ => ''
 		
 		char c5 = '%';
 		System.out.println(c5);
@@ -36,3 +36,4 @@ public class CharLiteralDemo {
 		
 	}
 }
+

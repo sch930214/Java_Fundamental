@@ -8,7 +8,7 @@ public class ForDemo {
 				sum = sum + i; //sum += i;
 			}	
 		}
-		System.out.printf("1ºÎÅÍ 10±îÁö Â¦¼öÀÇ ÃÑ ÇÕÀº %d ÀÔ´Ï´Ù.%n", sum);	
+		System.out.printf("1ë¶€í„° 10ê¹Œì§€ ì§ìˆ˜ì˜ ì´ í•©ì€ %d ì…ë‹ˆë‹¤.%n", sum);	
 		
 		for(int first = 2; first<=9; first++) {
 			for(int second = 1; second<=9; second++) {

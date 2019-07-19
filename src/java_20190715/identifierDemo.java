@@ -1,22 +1,22 @@
-//Æ¯¼ö¹®ÀÚÁß¿¡ $,_´Â »ç¿ëÇÒ ¼ö ÀÖÀ½
+//íŠ¹ìˆ˜ë¬¸ìžì¤‘ì— $,_ëŠ” ì‚¬ìš©í•  ìˆ˜ ìžˆìŒ
 package java_20190715;
-//Å¬·¡½º¸íÀÇ Ã¹±ÛÀÚ´Â ´ë¹®ÀÚ
-//µÎ´Ü¾î¸¦ ÇÕÄ£°æ¿ì¿¡´Â  µÎ¹øÂ°´Ü¾îÀÇ Ã¹±ÛÀÚ´Â ´ë¹®ÀÚ·Î »ç¿ë
+//í´ëž˜ìŠ¤ëª…ì˜ ì²«ê¸€ìžëŠ” ëŒ€ë¬¸ìž
+//ë‘ë‹¨ì–´ë¥¼ í•©ì¹œê²½ìš°ì—ëŠ”  ë‘ë²ˆì§¸ë‹¨ì–´ì˜ ì²«ê¸€ìžëŠ” ëŒ€ë¬¸ìžë¡œ ì‚¬ìš©
 //(camel case)
 public class identifierDemo {
 	public static void main (String[] args) {
 		int age = 10;
 		String name = "hello";
-		//Ã¹±ÛÀÚ·Î ¼ýÀÚ¸¦ »ç¿ëÇÒ ¼ö ¾øÀ½
+		//ì²«ê¸€ìžë¡œ ìˆ«ìžë¥¼ ì‚¬ìš©í•  ìˆ˜ ì—†ìŒ
 		//String 1fatherName = "John";
-		//°ø¹éÀ» »ç¿ëÇÒ ¼ö ¾øÀ½
+		//ê³µë°±ì„ ì‚¬ìš©í•  ìˆ˜ ì—†ìŒ
 		//String motherName = "Michell";
-		//¿¹¾à¾î´Â º¯¼ö·Î »ç¿ëÇÒ ¼ö ¾øÀ½
+		//ì˜ˆì•½ì–´ëŠ” ë³€ìˆ˜ë¡œ ì‚¬ìš©í•  ìˆ˜ ì—†ìŒ
 		//String void = "empty";
-		//ÀÚ¹Ù´Â À¯´ÏÄÚµå¸¦ Áö¿øÇÏ±â ¶§¹®¿¡ ÇÑ±Ûµµ ½Äº°ÀÚ·Î »ç¿ë
-		//°¡´ÉÇÏÁö¸¸ ¾È¾²´Â°Ô ÁÁÀ½.
-		String ÀÌ¸§ = "¼º¿µÇÑ";
-		System.out.println(ÀÌ¸§);
+		//ìžë°”ëŠ” ìœ ë‹ˆì½”ë“œë¥¼ ì§€ì›í•˜ê¸° ë•Œë¬¸ì— í•œê¸€ë„ ì‹ë³„ìžë¡œ ì‚¬ìš©
+		//ê°€ëŠ¥í•˜ì§€ë§Œ ì•ˆì“°ëŠ”ê²Œ ì¢‹ìŒ.
+		String ì´ë¦„ = "ì„±ì˜í•œ";
+		System.out.println(ì´ë¦„);
 		
 		
 	}

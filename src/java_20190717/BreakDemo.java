@@ -3,18 +3,18 @@ package java_20190717;
 public class BreakDemo {
 	public static void main(String[] args) {
 		int sum = 0;
-		//forºí·ÏÀÇ label
+		//forë¸”ë¡ì˜ label
 		test: for(int i = 1 ; i<=10 ; i++) {
-			if(i==6) break test; //break´Â ÇØ´çºí·ÏÀÇ ¹«ÇÑ·çÇÁ(¹İº¹¹®)¸¦ ºüÁ®³ª°¡´Â °Í. ex.¹İº¹¹®(for¹®, while¹®), ½ºÀ§Ä¡ÄÉÀÌ½º
-								//test¶ó´Â labelÀÇ ¹İº¹¹®À» ºüÁ®³ª°¡°Ú´Ù.
+			if(i==6) break test; //breakëŠ” í•´ë‹¹ë¸”ë¡ì˜ ë¬´í•œë£¨í”„(ë°˜ë³µë¬¸)ë¥¼ ë¹ ì ¸ë‚˜ê°€ëŠ” ê²ƒ. ex.ë°˜ë³µë¬¸(forë¬¸, whileë¬¸), ìŠ¤ìœ„ì¹˜ì¼€ì´ìŠ¤
+								//testë¼ëŠ” labelì˜ ë°˜ë³µë¬¸ì„ ë¹ ì ¸ë‚˜ê°€ê² ë‹¤.
 			sum = sum + i;
 		}
-		System.out.printf("1ºÎÅÍ 5±îÁö Â¦¼öÀÇ ÃÑ ÇÕÀº %d ÀÔ´Ï´Ù.%n", sum);
+		System.out.printf("1ë¶€í„° 5ê¹Œì§€ ì§ìˆ˜ì˜ ì´ í•©ì€ %d ì…ë‹ˆë‹¤.%n", sum);
 		
 		outter:for(int first = 2; first<=9; first++) {
 			for(int second = 1; second<=9; second++) {
 				if(first==4 && second==8) break outter;
-				//break outter¿¡¼­ outter Áö¿ï½Ã 4*7±îÁö ³ª¿À°í ÀÌÈÄ 5´ÜºÎÅÍ ´Ù½Ã Ãâ·Â
+				//break outterì—ì„œ outter ì§€ìš¸ì‹œ 4*7ê¹Œì§€ ë‚˜ì˜¤ê³  ì´í›„ 5ë‹¨ë¶€í„° ë‹¤ì‹œ ì¶œë ¥
 				System.out.printf("%d * %d = %d%n", first, second, first*second);
 				//////////
 			}

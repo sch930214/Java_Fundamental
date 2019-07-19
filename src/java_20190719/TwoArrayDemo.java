@@ -15,21 +15,21 @@ public class TwoArrayDemo {
 		int[][] b = {{10,20},{30,40},{50,60}};
 		
 		for(int i=0; i<a.length;i++) {
-			for(int j=0; j<a[i].length;j++) {             //for(int j=0; j<a[0].length;j++) { µµ °¡´É. ¾îÂ÷ÇÇ Á¤ÀûÀÌ¶ó °íÁ¤µÇ¹Ç·Î
-				System.out.print(a[i][j]+"\t");           //\t ÅÇ ³Ö¾î¼­ ¶ç¿ò
+			for(int j=0; j<a[i].length;j++) {             //for(int j=0; j<a[0].length;j++) { ë„ ê°€ëŠ¥. ì–´ì°¨í”¼ ì •ì ì´ë¼ ê³ ì •ë˜ë¯€ë¡œ
+				System.out.print(a[i][j]+"\t");           //\t íƒ­ ë„£ì–´ì„œ ë„ì›€
 			}	
-			System.out.println(); //ÁÙ ³ª´®
+			System.out.println(); //ì¤„ ë‚˜ëˆ”
 		}
 		
 		int[] c = {10,20,30};
 		
-		//±âº» ¹è¿­ ¹æ½Ä
+		//ê¸°ë³¸ ë°°ì—´ ë°©ì‹
 		
 		for (int i = 0; i < c.length; i++) {
 			System.out.println(c[i]);
 		}
 		
-		//enhanced for loop, °£Æí~
+		//enhanced for loop, ê°„íŽ¸~
 		//\t => tap
 		for(int temp : c) {
 			System.out.print(temp+"\t");

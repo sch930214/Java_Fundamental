@@ -5,13 +5,13 @@ public class CalenderDemo {
 		
 		/*
 		
-		// -´Þ·Â¸¸µé±â
+		// -ë‹¬ë ¥ë§Œë“¤ê¸°
 		
-		1. 1³â 1¿ù1ÀÏ ¿ù¿äÀÏ
-		2. 1³â 365ÀÏ ÀÌ°í, À±³âÀÏ¶§¿¡´Â 366ÀÏ - 2¿ù29ÀÏ
-		3. À±³âÀº 4³â¸¶´Ù ¹ß»ýÇÏ°í ±×Áß 100ÀÇ¼ö´Â Á¦¿ÜÇÏ°í 400ÀÇ ¹è¼ö´Â Á¦¿ÜÇÏÁö ¾Ê´Â´Ù.
-		4. 2019³â 12¿ù 25ÀÏ ¹«½¼¿äÀÏÀÏ±î?
-		5. 2018³â±îÁöÀÇ ÃÑÀÏ¼ö, 11¿ù±îÁö ÃÑÀÏ¼ö, 25ÀÏÀ» ´õÇØ¼­ 7·Î³ª´« ³ª¸ÓÁö°¡ 1ÀÌ¸é ¿ù¿äÀÏ, 2ÀÌ¸é È­¿äÀÏ
+		1. 1ë…„ 1ì›”1ì¼ ì›”ìš”ì¼
+		2. 1ë…„ 365ì¼ ì´ê³ , ìœ¤ë…„ì¼ë•Œì—ëŠ” 366ì¼ - 2ì›”29ì¼
+		3. ìœ¤ë…„ì€ 4ë…„ë§ˆë‹¤ ë°œìƒí•˜ê³  ê·¸ì¤‘ 100ì˜ìˆ˜ëŠ” ì œì™¸í•˜ê³  400ì˜ ë°°ìˆ˜ëŠ” ì œì™¸í•˜ì§€ ì•ŠëŠ”ë‹¤.
+		4. 2019ë…„ 12ì›” 25ì¼ ë¬´ìŠ¨ìš”ì¼ì¼ê¹Œ?
+		5. 2018ë…„ê¹Œì§€ì˜ ì´ì¼ìˆ˜, 11ì›”ê¹Œì§€ ì´ì¼ìˆ˜, 25ì¼ì„ ë”í•´ì„œ 7ë¡œë‚˜ëˆˆ ë‚˜ë¨¸ì§€ê°€ 1ì´ë©´ ì›”ìš”ì¼, 2ì´ë©´ í™”ìš”ì¼
 		*/
 		
 		
@@ -23,7 +23,7 @@ public class CalenderDemo {
 		int preMonth = month -1;
 		int totalCount = 0;
 		
-		//2018³âµµ±îÁöÀÇ ÃÑÀÏ¼ö¸¦ ±¸ÇÏ¶ó!
+		//2018ë…„ë„ê¹Œì§€ì˜ ì´ì¼ìˆ˜ë¥¼ êµ¬í•˜ë¼!
 		
 		totalCount = preYear * 365 +(preYear/4 - preYear/100 + preYear/400);
 		
@@ -37,11 +37,11 @@ public class CalenderDemo {
 		if(year%4==0 && (year%100 != 0 || year%400 == 0)) {
 			monthArray[1] = 29;
 		}
-		/*}else {//¹Ù²Ü°Ô ¾øÀ¸´Ï±î ºñ¿öµÖ
+		/*}else {//ë°”ê¿€ê²Œ ì—†ìœ¼ë‹ˆê¹Œ ë¹„ì›Œë‘¬
 			
 		}
 		*/
-		//2019³âµµ 11¿ù±îÁö ÇÕ ±¸ÇÏ±â
+		//2019ë…„ë„ 11ì›”ê¹Œì§€ í•© êµ¬í•˜ê¸°
 		for(int i=0; i<preMonth; i++) {
 			totalCount += monthArray[i];
 		}
@@ -52,23 +52,23 @@ public class CalenderDemo {
 		int dayOfWeek = totalCount % 7;
 		String message = null;
 		if(dayOfWeek == 1) {
-			message = "¿ù¿äÀÏ";
+			message = "ì›”ìš”ì¼";
 		}if (dayOfWeek == 2) {
-			message = "È­¿äÀÏ";
+			message = "í™”ìš”ì¼";
 		}if (dayOfWeek == 3) {
-			message = "¼ö¿äÀÏ";
+			message = "ìˆ˜ìš”ì¼";
 		}if (dayOfWeek == 4) {
-			message = "¸ñ¿äÀÏ";
+			message = "ëª©ìš”ì¼";
 		}if (dayOfWeek == 5) {
-			message = "±Ý¿äÀÏ";
+			message = "ê¸ˆìš”ì¼";
 		}if (dayOfWeek == 6) {
-			message = "Åä¿äÀÏ";
+			message = "í† ìš”ì¼";
 		}if (dayOfWeek == 0) {
-			message = "ÀÏ¿äÀÏ";
+			message = "ì¼ìš”ì¼";
 					
 		}
 		
-		System.out.println(year+"³â "+ month + "¿ù "+ day + "ÀÏ "+ message);
+		System.out.println(year+"ë…„ "+ month + "ì›” "+ day + "ì¼ "+ message);
 		
 		
 		

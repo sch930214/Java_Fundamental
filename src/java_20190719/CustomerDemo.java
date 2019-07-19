@@ -2,29 +2,29 @@ package java_20190719;
 
 public class CustomerDemo {
 	public static void main(String[] args) {
-		//Customer °´Ã¼ »ı¼º
+		//Customer ê°ì²´ ìƒì„±
 		//Customer => Object type
 		//c1 => reference
 		//new Customer() => Object
 		Customer c1 = new Customer();
-		c1.name = "¼º¿µÇÑ";
+		c1.name = "ì„±ì˜í•œ";
 		c1.age = 30;
 		c1.email = "syh@hbilab.org";
 		c1.phone = "010-3204-1703";
 		c1.balance = 23_000_000_000.23;
 		c1.isReleased = false;
-		//%,f => Ãµ´ÜÀ§·Î ,ÂïÇô¼­ Ãâ·Â //%.2f => ¼Ò¼öÁ¡ µÑÂ°ÀÚ¸®±îÁö Ãâ·Â 
-		//%n À§Ä¡ ÁÖÀÇ
+		//%,f => ì²œë‹¨ìœ„ë¡œ ,ì°í˜€ì„œ ì¶œë ¥ //%.2f => ì†Œìˆ˜ì  ë‘˜ì§¸ìë¦¬ê¹Œì§€ ì¶œë ¥ 
+		//%n ìœ„ì¹˜ ì£¼ì˜
 		System.out.printf("%s,%d,%s,%s,%,.2f,%s%n", c1.name, c1.age, c1.email, c1.phone, c1.balance, c1.isReleased);
 		Customer c2 = new Customer();
-		c2.name = "¼ÕÁ¤ÀÇ";
+		c2.name = "ì†ì •ì˜";
 		c2.age = 60;
 		c2.email = "ceo@softbank.com";
 		c2.phone = "010-9999-0000";
 		c2.balance = 45_000_000_000.24;
 		c2.isReleased = true;
 		
-		//primitive´Â ¾ÈµÇÁö¸¸ reference´Â °¡´É
+		//primitiveëŠ” ì•ˆë˜ì§€ë§Œ referenceëŠ” ê°€ëŠ¥
 		Customer c3 = c2;
 		c3.age = 61;
 		

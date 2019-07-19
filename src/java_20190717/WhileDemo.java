@@ -8,7 +8,7 @@ public class WhileDemo {
 			sum += i;
 			i++;
 		}
-		System.out.printf("1╨нем 10╠НаЖ гую╨ %d ют╢о╢ы.%n", sum);
+		System.out.printf("1К╤─М└╟ 10Й╧▄Л╖─ М∙╘Л²─ %d Л·┘К▀┬К▀╓.%n", sum);
 		
 		int first = 2;
 		while(first <= 9) {

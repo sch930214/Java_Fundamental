@@ -3,23 +3,23 @@ package java_20190717;
 public class ContinueDemo {
 	public static void main(String[] args) {
 		int sum = 0;
-		//forºí·ÏÀÇ label
+		//forë¸”ë¡ì˜ label
 		for(int i = 1 ; i<=10 ; i++) {
-			//if(i==6) return; ¿©±â¿¡ ÀûÀ¸¸é ¾Æ¿¹ Ã³À½(main)À¸·Î µ¹¾Æ°¨. ±×·¡¼­ ¾Æ¹«°Íµµ Ãâ·Â ¾ÈµÊ.
+			//if(i==6) return; ì—¬ê¸°ì— ì ìœ¼ë©´ ì•„ì˜ˆ ì²˜ìŒ(main)ìœ¼ë¡œ ëŒì•„ê°. ê·¸ë˜ì„œ ì•„ë¬´ê²ƒë„ ì¶œë ¥ ì•ˆë¨.
 			
-			if(i==6) continue; //continue¸¦ »ç¿ëÇÏ°Ô µÇ¸é 6À» Á¦¿ÜÇÑ ¼ıÀÚ¸¦ ´õÇÔ. 
-								//continue¸¦ ¸¸³ª¸é ±× ÀÌÇÏÀÇ ¹®ÀåÀº ¼öÇàÇÏÁö ¾Ê°í Á¶°Ç¹®À¸·Î µÇµ¹¾Æ°¡¼­ °è¼Ó ¼öÇàÇÏ´Â °Í.
+			if(i==6) continue; //continueë¥¼ ì‚¬ìš©í•˜ê²Œ ë˜ë©´ 6ì„ ì œì™¸í•œ ìˆ«ìë¥¼ ë”í•¨. 
+								//continueë¥¼ ë§Œë‚˜ë©´ ê·¸ ì´í•˜ì˜ ë¬¸ì¥ì€ ìˆ˜í–‰í•˜ì§€ ì•Šê³  ì¡°ê±´ë¬¸ìœ¼ë¡œ ë˜ëŒì•„ê°€ì„œ ê³„ì† ìˆ˜í–‰í•˜ëŠ” ê²ƒ.
 			sum = sum + i;
 		}
-		System.out.printf("1ºÎÅÍ 10±îÁö ÃÑ ÇÕÀº %d ÀÔ´Ï´Ù.%n", sum);
+		System.out.printf("1ë¶€í„° 10ê¹Œì§€ ì´ í•©ì€ %d ì…ë‹ˆë‹¤.%n", sum);
 		
-		if(true) return; //return ÀÌÈÄ ³»¿ë ½ÇÇà¾ÈµÊ. ¿©±â¿¡ À§Ä¡ÇÏ¸é ¹Ø¿¡ ³»¿ë Ãâ·Â ¾ÈµÊ.
+		if(true) return; //return ì´í›„ ë‚´ìš© ì‹¤í–‰ì•ˆë¨. ì—¬ê¸°ì— ìœ„ì¹˜í•˜ë©´ ë°‘ì— ë‚´ìš© ì¶œë ¥ ì•ˆë¨.
 		
 		outter:for(int first = 2; first<=9; first++) {
 			for(int second = 1; second<=9; second++) {
 				if(second==5) continue outter;
-				//continue outter labelÀ» ´Ş¾Æ³ù±â ¶§¹®¿¡ Ã¹¹øÂ° for¹® Á¶°ÇÀ¸·Î µ¹¾Æ°¡¼­ second°¡ 5ÀÌ»óÀÎ ±¸±¸´ÜÀº ÀüºÎ´Ù ºüÁü
-				//continue µÚ¿¡ labelÀÌ ¾øÀ»½Ã µÎ¹øÂ° for¹® Á¶°ÇÀ¸·Î µ¹¾Æ°¡¼­ µŞÀÚ¸®°¡ 5ÀÎ ±¸±¸´Ü¸¸ ÀüºÎ ºüÁü
+				//continue outter labelì„ ë‹¬ì•„ë†¨ê¸° ë•Œë¬¸ì— ì²«ë²ˆì§¸ forë¬¸ ì¡°ê±´ìœ¼ë¡œ ëŒì•„ê°€ì„œ secondê°€ 5ì´ìƒì¸ êµ¬êµ¬ë‹¨ì€ ì „ë¶€ë‹¤ ë¹ ì§
+				//continue ë’¤ì— labelì´ ì—†ì„ì‹œ ë‘ë²ˆì§¸ forë¬¸ ì¡°ê±´ìœ¼ë¡œ ëŒì•„ê°€ì„œ ë’·ìë¦¬ê°€ 5ì¸ êµ¬êµ¬ë‹¨ë§Œ ì „ë¶€ ë¹ ì§
 				System.out.printf("%d * %d = %d%n", first, second, first*second);
 				
 			}

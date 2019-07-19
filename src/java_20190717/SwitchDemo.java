@@ -5,34 +5,34 @@ public class SwitchDemo {
 		int month = Integer.parseInt(args[0]);
 		String season = null;
 		switch (month) {
-		// caseÀÇ Æò°¡°ªÀº À¯ÀÏÇØ¾ß ÇÑ´Ù.
-		// ¸¶Áö¸·¿¡´Â break;¾ø¾îµµ µÊ. default¸Ç À§³ª Áß°£À¸·Î ¿Ã ½Ã, ¸Ç µÚ¿¡ break; ¸Ç µÚ¿¡ ³õ´Â°Ô Á¤¼®.
+		// caseì˜ í‰ê°€ê°’ì€ ìœ ì¼í•´ì•¼ í•œë‹¤.
+		// ë§ˆì§€ë§‰ì—ëŠ” break;ì—†ì–´ë„ ë¨. defaultë§¨ ìœ„ë‚˜ ì¤‘ê°„ìœ¼ë¡œ ì˜¬ ì‹œ, ë§¨ ë’¤ì— break; ë§¨ ë’¤ì— ë†“ëŠ”ê²Œ ì •ì„.
 		case 12:
 		case 1:
 		case 2:
-			season = "°Ü¿ï";
+			season = "ê²¨ìš¸";
 			break;
 		case 3:
 		case 4:
 		case 5:
-			season = "º½";
+			season = "ë´„";
 			break;
 		case 6:
 		case 7:
 		case 8:
-			season = "¿©¸§";
+			season = "ì—¬ë¦„";
 			break;
 		case 9:
 		case 10:
 		case 11:
-			season = "°¡À»";
+			season = "ê°€ì„";
 			break;
 		default:
-			season = "¾ø´Â °èÀı";
+			season = "ì—†ëŠ” ê³„ì ˆ";
 		}
 		
 		// printf - pg.36
-		// ³ì»öÈ­»ìÇ¥ - Run configurations - Arguments - Program Arguments¿¡ ¼öÄ¡ ÀÔ·Â
-		System.out.printf("%d¿ùÀº %sÀÔ´Ï´Ù.", month, season);
+		// ë…¹ìƒ‰í™”ì‚´í‘œ - Run configurations - Arguments - Program Argumentsì— ìˆ˜ì¹˜ ì…ë ¥
+		System.out.printf("%dì›”ì€ %sì…ë‹ˆë‹¤.", month, season);
 	}
 }

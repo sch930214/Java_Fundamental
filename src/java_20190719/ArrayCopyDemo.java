@@ -4,13 +4,13 @@ public class ArrayCopyDemo {
 	public static void main(String[] args) {
 		String[] fruits = {"apple", "banana", "watermelon", "blueberry"};
 		
-		String[] temp = new String[6];  //¹®ÀÚ¿­ String Á¤¼ö int 
+		String[] temp = new String[6];  //ë¬¸ìì—´ String ì •ìˆ˜ int 
 		
-		//fruits => ¿øº»¹è¿­
-		//0 => ¿øº»¹è¿­ÀÇ À§Ä¡ Áï, ¿øº»¹è¿­ º¹»ç ½ÃÀÛ À§Ä¡
-		//temp => fruits¸¦ º¹»çÇÏ¿© ³ÖÀ» ¹è¿­
-		//0 => Ä«ÇÇÇÒ ¹è¿­ÀÇ ½ÃÀÛ À§Ä¡
-		//4 => ¿øº»¹è¿­ÀÇ 4°³¿ä¼Ò¸¦ Ä«ÇÇ
+		//fruits => ì›ë³¸ë°°ì—´
+		//0 => ì›ë³¸ë°°ì—´ì˜ ìœ„ì¹˜ ì¦‰, ì›ë³¸ë°°ì—´ ë³µì‚¬ ì‹œì‘ ìœ„ì¹˜
+		//temp => fruitsë¥¼ ë³µì‚¬í•˜ì—¬ ë„£ì„ ë°°ì—´
+		//0 => ì¹´í”¼í•  ë°°ì—´ì˜ ì‹œì‘ ìœ„ì¹˜
+		//4 => ì›ë³¸ë°°ì—´ì˜ 4ê°œìš”ì†Œë¥¼ ì¹´í”¼
 		System.arraycopy(fruits, 0, temp, 2, 4);
 		temp[0] = "peach";
 		temp[1] = "raspberry";	

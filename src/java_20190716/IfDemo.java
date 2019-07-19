@@ -7,17 +7,17 @@ public class IfDemo {
 		// run configurations => Arguments => program arguments
 		String season = null;
 		if (month == 12 || month == 1 || month == 2) {
-			season = "°Ü¿ï";
+			season = "ê²¨ìš¸";
 		} else if (month == 3 || month == 4 || month == 5) {
-			season = "º½";
+			season = "ë´„";
 		} else if (month == 6 || month == 7 || month == 8) {
-			season = "¿©¸§";
+			season = "ì—¬ë¦„";
 		} else if (month == 9 || month == 10 || month == 11) {
-			season = "°¡À»";
+			season = "ê°€ì„";
 		} else {
-			season = "¾ø´Â °èÀı";
+			season = "ì—†ëŠ” ê³„ì ˆ";
 		}
-		System.out.println(month + "¿ùÀº " + season + "ÀÔ´Ï´Ù.");
+		System.out.println(month + "ì›”ì€ " + season + "ì…ë‹ˆë‹¤.");
 
 	}
 }

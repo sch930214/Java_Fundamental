@@ -1,6 +1,6 @@
 package java_20190716;
 
-// Ctrl +Shift + f => ÀÚµ¿À» ÁÙ¸ÂÃë
+// Ctrl +Shift + f => ìë™ì„ ì¤„ë§ì·¨
 public class OperatorDemo {
 	public static void main(String[] args) {
 		int a = 10, b = 22;
@@ -39,11 +39,11 @@ public class OperatorDemo {
 		c= a++;
 		
 		System.out.println(c);
-		//´ëÀÔ ÈÄ Áõ°¡
+		//ëŒ€ì… í›„ ì¦ê°€
 		
 		c = ++b;
 		System.out.println(c);
-		//Áõ°¡ ÈÄ ´ëÀÔ
+		//ì¦ê°€ í›„ ëŒ€ì…
 		
 		a = 10;
 		b = 20;
@@ -63,8 +63,8 @@ public class OperatorDemo {
 		
 		isSuccess = (a==b) && (a++ == b++);
 		System.out.println(isSuccess);
-		// a && b => a°¡ falseÀÌ¸é b¿¬»êÀ» ÇÏÁö¾ÊÀ½(short circuit)°ÅÁşÀ×²²
-		// a || b => a°¡ trueÀÌ¸é b¿¬»óÀ» ÇÏÁö¾ÊÀ½(short circuit) ÂüÀÌ´Ï²²
+		// a && b => aê°€ falseì´ë©´ bì—°ì‚°ì„ í•˜ì§€ì•ŠìŒ(short circuit)ê±°ì§“ì‰ê»˜
+		// a || b => aê°€ trueì´ë©´ bì—°ìƒì„ í•˜ì§€ì•ŠìŒ(short circuit) ì°¸ì´ë‹ˆê»˜
 		System.out.println(a);
 		System.out.println(b);
 		

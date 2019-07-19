@@ -2,21 +2,21 @@ package java_20190715;
 
 public class CastingDemo {
 	public static void main(String[] agrs) {
-		//overflow ¹ß»ıÇÏ¿© ÄÄÆÄÀÏ ¿¡·¯
+		//overflow ë°œìƒí•˜ì—¬ ì»´íŒŒì¼ ì—ëŸ¬
 		//byte b1 = 250;
 		
-		byte b1 = (byte)250;//circuit ¹ß»ı, ±ÇÀåÇÏÁö ¾ÊÀ½
+		byte b1 = (byte)250;//circuit ë°œìƒ, ê¶Œì¥í•˜ì§€ ì•ŠìŒ
 		System.out.println(b1);
 		
-		int i1 = (int)123.45;//cut ¹ß»ı
+		int i1 = (int)123.45;//cut ë°œìƒ
 		System.out.println(i1);
 		
-		double d1 = 123.45f;//ÀÚµ¿ Çüº¯È¯
+		double d1 = 123.45f;//ìë™ í˜•ë³€í™˜
 		System.out.println(d1);
 		
 		byte b2 = 10;
 		byte b3 = 20;
-		//»ê¼ú¿¬»êÀÚ´Â ¹İÈ¯°ªÀÌ intÀÌ±â ¶§¹®¿¡ ÀüÃ¼¸¦ byte·Î Çüº¯È¯ÇØ¾ß ¿¡·¯°¡ ¹ß»ıÇÏÁö ¾ÊÀ½.
+		//ì‚°ìˆ ì—°ì‚°ìëŠ” ë°˜í™˜ê°’ì´ intì´ê¸° ë•Œë¬¸ì— ì „ì²´ë¥¼ byteë¡œ í˜•ë³€í™˜í•´ì•¼ ì—ëŸ¬ê°€ ë°œìƒí•˜ì§€ ì•ŠìŒ.
 		byte b4 = (byte)(b2 + b3);
 		System.out.println(b4);
 	}
