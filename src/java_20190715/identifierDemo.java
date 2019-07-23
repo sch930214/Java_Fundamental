@@ -10,7 +10,7 @@ public class identifierDemo {
 		//첫글자로 숫자를 사용할 수 없음
 		//String 1fatherName = "John";
 		//공백을 사용할 수 없음
-		//String motherName = "Michell";
+		//String mother Name = "Michell";
 		//예약어는 변수로 사용할 수 없음
 		//String void = "empty";
 		//자바는 유니코드를 지원하기 때문에 한글도 식별자로 사용

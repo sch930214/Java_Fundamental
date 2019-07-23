@@ -31,7 +31,7 @@ public class CharLiteralDemo {
 		// \' => single quotation
 		// \" => double quotation
 		
-		String path = "aa\nbb";
+		String path = "aa\'bb";
 		System.out.println(path);
 		
 	}

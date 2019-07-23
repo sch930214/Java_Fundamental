@@ -20,7 +20,7 @@ public class SsnDemo {
 		
 		int sum = a1*2 + a2*3 + a3*4 + a4*5+ a5*6 + a6*7+  
 				b1*8+ b2*9 + b3*2 + b4*3+ b5*4+ b6*5;
-		
+		System.out.println(a1 += b2);
 		// 2. 총합을 11로 나눈 나머지를 구하다.
 		int rest = sum % 11;
 		// 3. 11에서 나머지를 뺀다

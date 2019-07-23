@@ -7,9 +7,11 @@ public class LiteralDemo {
 		int a1 = 128;//10진수 표기법
 		int a2 = 076;//8진수 표기법
 		int a3 = 0x123;//16진수 표기법
+		
 		System.out.println(a1);
 		System.out.println(a2);
 		System.out.println(a3);
+		
 		
 		//long 리터럴은 숫자 뒤에 l, L로 표기함.
 		long a4 = 1L;
@@ -28,11 +30,12 @@ public class LiteralDemo {
 		System.out.println(a1==d1);
 		
 		int b1 = 10;
-		//b2dp b1의 값인 10을 할당.
+		//b2에 b1의 값인 10을 할당.
 		int b2 = b1;
 		b2 = 20;
 		System.out.println(b1);
 		System.out.println(b2);
+		
 
 	}
 }

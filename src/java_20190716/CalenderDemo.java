@@ -15,9 +15,9 @@ public class CalenderDemo {
 		*/
 		
 		
-		int year = 2020;
-		int month = 3;
-		int day = 15;
+		int year = 2019;
+		int month = 7;
+		int day = 23;
 		
 		int preYear = year-1;
 		int preMonth = month -1;
@@ -26,9 +26,9 @@ public class CalenderDemo {
 		//2018년도까지의 총일수를 구하라!
 		
 		totalCount = preYear * 365 +(preYear/4 - preYear/100 + preYear/400);
-		
-		totalCount += 31 - 29;
-		
+	
+		totalCount += 31 + 28 + 31 + 30 + 31 + 31;
+	
 		totalCount += day;
 		
 		int dayOfWeek = totalCount % 7;

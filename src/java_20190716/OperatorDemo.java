@@ -10,10 +10,10 @@ public class OperatorDemo {
 		System.out.println(c);
 	
 		d = a - b;
-		System.out.println(c);
+		System.out.println(d);
 		
 		d = a * b;
-		System.out.println(c);
+		System.out.println(d);
 		
 		d = (double)b / (double)a;
 		System.out.println(d);
@@ -28,7 +28,7 @@ public class OperatorDemo {
 		System.out.println(a);
 		
 		int sum = 0;
-		for(int i=1; i<=100 ; i++) {
+		for(int i=1; i<=50 ; i++) {
 			sum +=i;
 			System.out.println(sum);
 		}
