@@ -15,15 +15,15 @@ public class OverloadingDemo {
 	}
 	
 	public void print(int i) {
-		System.out.print(i);	
+		System.out.print(i + "\n");	
 	}
 	
 	public void print(double d) {
-		System.out.print(d);
+		System.out.print(d + "\n");
 	}
 	
 	public void print(boolean b) {
-		System.out.print(b);
+		System.out.print(b + "\n");
 	}
 	
 	public static void main(String[] args) {
