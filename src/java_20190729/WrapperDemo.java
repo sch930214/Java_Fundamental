@@ -19,7 +19,7 @@ public class WrapperDemo {
 		//1. primitive data type => wrapper class(생성자를 이용 => new Integer(10)). collection에 담으려고.
 		Integer i2 = new Integer(10);
 		Integer i3 = new Integer(20);
-				
+		
 		
 		//2. String => wrapper class(Integer.valueOf(10)) 문자열을  wrapper class로 변환
 		String s1 = "10";
