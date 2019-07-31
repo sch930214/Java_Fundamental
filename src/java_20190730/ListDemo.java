@@ -26,7 +26,7 @@ public class ListDemo {
 		Product p1 = new Product(1,"terra",2500);
 		Product p2 = new Product(2,"신라면",1000);
 		Product p3 = new Product(3,"서울우유",3000);
-		Product p4 = new Product(1,"terra",2600);
+		Product p4 = new Product(1,"terra",2500);
 		
 		list.add(p1);//할당
 		list.add(p2);
@@ -54,6 +54,18 @@ public class ListDemo {
 			System.out.println(product);
 			
 		
+		}
+		
+		for(Product product : list) {
+			if(product.number == 3) {
+				product.price = 3500;
+			}
+		}
+		for(int i = 0; i<list.size();i++) {
+			
+            //(Product)
+			Product temp = list.get(i);       //Generic때문에 Product 불필요~
+			System.out.println(temp);
 		}
 	}
 	

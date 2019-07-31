@@ -42,7 +42,7 @@ public class LotteryDemo {
 		}
 		
 		for (int i = 0; i < lotto.length; i++) {
-			System.out.print(lotto[i] + ", ");
+			System.out.print(lotto[i] + "\t");
 		}
 		
 		//오름차순 - 두개를 비교해서 더 크면 오른쪽
