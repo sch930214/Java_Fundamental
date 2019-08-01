@@ -9,6 +9,7 @@ public class LotteryDemo {
 		
 		int[] lotto = new int[6];
 		
+		
 		for (int i = 0; i < lotto.length; i++) {
 			//temp는 1보다 크거나 같고 45보다 작거나 같은 임의의 값
 			//매번 새로 생성되어야 한다.
