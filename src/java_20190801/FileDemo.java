@@ -19,6 +19,7 @@ public class FileDemo {
 	
 	public String getComma(double name,int precision) {
 		return String.format("%,."+precision+"f", name);           //소수점찍는거
+		
 	}
 	
 	public void changeFile(String path) {
