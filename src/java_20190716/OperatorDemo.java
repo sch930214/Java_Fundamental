@@ -28,7 +28,7 @@ public class OperatorDemo {
 		System.out.println(a);
 		
 		int sum = 0;
-		for(int i=1; i<=50 ; i++) {
+		for(int i=1; i<=3 ; i++) {
 			sum +=i;
 			System.out.println(sum);
 		}

@@ -7,9 +7,9 @@ public class BreakDemo {
 		test: for(int i = 1 ; i<=10 ; i++) {
 			if(i==6) break test; //break는 해당블록의 무한루프(반복문)를 빠져나가는 것. ex.반복문(for문, while문), 스위치케이스
 								//test라는 label의 반복문을 빠져나가겠다.
-			sum = sum + i;
+			sum += i;
 		}
-		System.out.printf("1부터 5까지 짝수의 총 합은 %d 입니다.%n", sum);
+		System.out.printf("1부터 5까지 총 합은 %d 입니다.%n", sum);
 		
 		outter:for(int first = 2; first<=9; first++) {
 			for(int second = 1; second<=9; second++) {

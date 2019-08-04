@@ -11,7 +11,7 @@ public class ContinueDemo {
 								//continue를 만나면 그 이하의 문장은 수행하지 않고 조건문으로 되돌아가서 계속 수행하는 것.
 			sum = sum + i;
 		}
-		System.out.printf("1부터 10까지 총 합은 %d 입니다.%n", sum);
+		System.out.printf("6을 제외한 1부터 10까지 총 합은 %d 입니다.%n", sum);
 		
 		if(true) return; //return 이후 내용 실행안됨. 여기에 위치하면 밑에 내용 출력 안됨.
 		

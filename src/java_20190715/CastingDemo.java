@@ -11,7 +11,7 @@ public class CastingDemo {
 		int i1 = (int)123.45;//cut 발생
 		System.out.println(i1);
 		
-		double d1 = 123.45f;//자동 형변환
+		double d1 = 123.12345678901234567890;//자동 형변환
 		System.out.println(d1);
 		
 		byte b2 = 10;

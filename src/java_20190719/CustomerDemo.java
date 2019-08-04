@@ -26,9 +26,10 @@ public class CustomerDemo {
 		
 		//primitive는 안되지만 reference는 가능
 		Customer c3 = c2;
-		c3.age = 61;
 		
-		System.out.printf("%s,%d,%s,%s,$%,.2f,%s", c2.name, c3.age, c2.email, c2.phone, c2.balance, c2.isReleased);
+		System.out.printf("%s,%d,%s,%s,$%,.2f,%s%n", c2.name, c2.age, c2.email, c2.phone, c2.balance, c2.isReleased);
+		c3.age = 61;
+		System.out.printf("%s,%d,%s,%s,$%,.2f,%s%n", c3.name, c3.age, c3.email, c3.phone, c3.balance, c3.isReleased);
 		
 	}
 }

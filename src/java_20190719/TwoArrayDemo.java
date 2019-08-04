@@ -33,6 +33,14 @@ public class TwoArrayDemo {
 		//\t => tap
 		for(int temp : c) {
 			System.out.print(temp+"\t");
+			
+		
+		}
+		System.out.println();
+		String[] x = {"1.2","2.2","wow","good","enhanced for loop","향상된 For 문"};
+		for (String eForLoop : x) {
+			System.out.print(eForLoop +"\t");
+			
 		}
 		
 	}
