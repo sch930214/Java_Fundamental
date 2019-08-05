@@ -7,6 +7,8 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class BufferedReaderWriterDemo {
+	private static BufferedWriter bw;
+
 	public static void main(String[] args) {
 		FileReader fr = null;
 		BufferedReader br = null;
@@ -21,9 +23,9 @@ public class BufferedReaderWriterDemo {
 			bw = new BufferedWriter(fw);
 			
 			String readLine = null;
-			while((readLine = br.readLine()) != null) {               //readLine()은 개행을 읽지 않음.
+			while((readLine = br.readLine()) != null) {
 				bw.write(readLine);
-				bw.newLine();											//문장 개행 해줌. 혹은 \n
+				bw.newLine();
 			}
 			bw.flush();
 		} catch (IOException e) {
@@ -39,6 +41,13 @@ public class BufferedReaderWriterDemo {
 				e.printStackTrace();
 			}
 		}
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		

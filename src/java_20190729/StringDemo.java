@@ -101,6 +101,7 @@ public class StringDemo {
 		//split(String delimiter)
 		
 		//ㅣ문자열을 구분자( delimiter)로 토큰(token)화 시키는 메서드
+		
 		String[] strArray = ssn.split("-");
 		System.out.println(strArray[0]);
 		System.out.println(strArray[1]);
