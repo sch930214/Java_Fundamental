@@ -10,16 +10,18 @@ public class Member {
 	private int age;
 	private String regdate;
 
+	// name에 대한 setter method => instance 변수(name정보)를 변경할 수 있는 method
+	public void setName(String name) {
+		this.name = name; // local변수와 매개변수가 헷갈리므로 구분을 위해 this붙여줌
+	}
+	
+	
 	// name => setter, getter method
 	// name에 대한 getter method => instance 변수(name정보)를 가져올 수 있는 method
 	public String getName() {
 		return name;
 	}
 
-	// name에 대한 setter method => instance 변수(name정보)를 변경할 수 있는 method
-	public void setName(String name) {
-		this.name = name; // local변수와 매개변수가 헷갈리므로 구분을 위해 this붙여줌
-	}
 
 	public void setZipcode(String zipcode) {
 		this.zipcode = zipcode;
