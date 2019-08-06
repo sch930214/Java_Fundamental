@@ -22,5 +22,7 @@ public class MemberPayDemo {
 		System.out.println(m1.getEdate());
 		System.out.println(m1.getRegdate());
 		System.out.println(m1.isValid());
+		
+		
 	}
 }

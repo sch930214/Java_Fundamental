@@ -2,7 +2,7 @@ package java_20190722;
 
 
 public class MemberPay {
-	private int seq;
+	public int seq;
 	private int group;
 	private String name;
 	private int price;
@@ -11,6 +11,7 @@ public class MemberPay {
 	private String sdate;
 	private String edate;
 	private String regdate;
+	
 	
 	//Alt + Shift + S > R (generate getters and setters) > Select All > Finish
 	public int getSeq() {
