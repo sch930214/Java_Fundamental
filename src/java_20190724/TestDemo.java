@@ -5,7 +5,7 @@ import java_20190724.aa.Test;
 								//public class Test로 바꿔주면 에러 사라짐.
 public class TestDemo {
 	public static void main(String[] args) {
-		Test t = new Test() ;              //new Test(); 생성자 호출 , 객체 생성, 변수 저장 but 접근한정자 때문에 에러
+		Test t = new Test();              //new Test(); 생성자 호출 , 객체 생성, 변수 저장 but 접근한정자 때문에 에러
 																					//생성자의 접근한정자가 default값이기 때문
 																					//new Test();에 에러표시(빨간줄)
 																					//생성자에 public추가하면 에러 사라짐.
@@ -16,5 +16,9 @@ public class TestDemo {
 												//즉 public class Test이므로 public Test() {}가 만들어지는 것.
 		
 		//Math m = new Math ();   //이 생성자가 없거나 있는데 public이 아니거나 하면 에러.
+		
+		
+		
+		
 	}
 }

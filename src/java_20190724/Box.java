@@ -26,7 +26,7 @@ public class Box {
 		String str = null;
 		double d = 0.0;					
 		
-		System.out.println(width);
+		System.out.println(c);
 		//System.out.println(test);                //지역변수는 0이라고 선언해줘야된다. 지역변수는 초기화설정 안해줌.
 		b.depth = 3000;
 		
