@@ -19,7 +19,7 @@ public class StringDemo {
 		ssn = ssn.concat("abcd"); //문자열 더해줌 그냥 + "" 가 쉽긴 함.
 		System.out.println(ssn);
 		
-		String fileName = "abc.abc.asweruiopweho.doc";
+		String fileName = "so.crazy.doc";
 		if(fileName.endsWith("zip")) {
 			System.out.println("압축파일 입니다.");
 			
@@ -30,7 +30,7 @@ public class StringDemo {
 			System.out.println("파일 입니다.");
 		}
 		
-		System.out.println(fileName.equalsIgnoreCase("ABD.DOc"));
+		System.out.println(fileName.equalsIgnoreCase("sO.CRAZY.DOc"));
 		
 		//
 		
@@ -54,7 +54,7 @@ public class StringDemo {
 		String html = "안녕하세요\n저는 손정훈 입니다.\n잘 부탁드립니다.";
 		//replaceAll(String first, String second)
 		//first 문자열을 second 문자열로 대체한다.
-		html = html.replaceAll("\n","<br>");
+		html = html.replaceAll("\n","\t");
 		System.out.println(html);
 	
 	
@@ -91,10 +91,10 @@ public class StringDemo {
 		//String.valueOf() : primitive data type을 문자열로 바꿔줌.
 		int a = 10;
 		String str = String.valueOf(a);
-		System.out.println(str);
+		System.out.println(str+10);
 		
 		char[] c1 = {'a','b','c'};
-		String str1 = String.valueOf(c1,1,1);
+		String str1 = String.valueOf(c1,1,1);                          //????????????????
 		System.out.println(str1);
 	
 		//ssn : 111111-1111118

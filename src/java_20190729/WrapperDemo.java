@@ -24,7 +24,7 @@ public class WrapperDemo {
 		//2. String => wrapper class(Integer.valueOf(10)) 문자열을  wrapper class로 변환
 		String s1 = "10";
 		String s2 = "20";
-		Integer i1 = Integer.valueOf("s1");
+		Integer i1 = Integer.valueOf(s1);
 		
 		//3. wrapper class => primitive data type으로 변환, 연산하려고.(intValue())
 		//불가능.  reference끼리 더하는 것처럼 되므로. 
@@ -38,6 +38,7 @@ public class WrapperDemo {
 		//5. Primitive data type => String(String.valueOf() Or +"")
 		int a1 = 10;
 		String s3 = String.valueOf(a1);
+		System.out.println(s3+3);
 		
 		
 		//auto-boxing : primitive data type을 자동으로 wrapper로 바꿔줌.
@@ -48,6 +49,7 @@ public class WrapperDemo {
 		
 		System.out.println(i2);
 		System.out.println(i2.equals(i3));
+		System.out.println(a2);
 		
 		String s4 = "12.34";
 		//double d1 = Integer.parseInt(s4);

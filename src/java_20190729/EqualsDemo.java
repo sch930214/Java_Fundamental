@@ -58,7 +58,7 @@ public class EqualsDemo {
 		
 		System.out.println(s1.hashCode());
 		System.out.println(s2.hashCode());
-		
+		System.out.println(s1.hashCode()==s2.hashCode());
 		
 		Car c1 = new Car("10101010", "black");
 		Car c2 = new Car("10101010", "black");
