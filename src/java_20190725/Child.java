@@ -8,6 +8,7 @@ public class Child extends Parent {
 
 		public void m() {
 			phone = ""; //가능
+			System.out.println(phone);
 	
 		}
 	
@@ -25,6 +26,14 @@ public class Child extends Parent {
 	}
 
 	public Child() {
+		//super();
 		System.out.println("Child 생성자");
 	}
+	
+	public static void main(String[] args) {
+		m1();
+		Child c = new Child();
+		c.m();
+	}
+	
 }

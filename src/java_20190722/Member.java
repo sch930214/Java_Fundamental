@@ -9,6 +9,9 @@ public class Member {
 	private String ssn2;
 	private int age;
 	private String regdate;
+	
+	
+	
 
 	// name에 대한 setter method => instance 변수(name정보)를 변경할 수 있는 method
 	public void setName(String name) {

@@ -1,4 +1,4 @@
-package java_20190807.unicast.client;
+package java_20190808.multicast.client;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -6,6 +6,13 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.net.Socket;
+import java.net.UnknownHostException;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -16,7 +23,7 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
-public class UnicastClient implements ActionListener{
+public class MulticastClient implements ActionListener{
 	
 	private String id;
 	private String ip;
@@ -25,8 +32,10 @@ public class UnicastClient implements ActionListener{
 	private JTextArea jta;
 	private JTextField jtf;
 	private JButton jbtn;
+	private BufferedReader br;
+	private BufferedWriter bw;
 	
-	public UnicastClient(String id, String ip, int port) {
+	public MulticastClient(String id, String ip, int port) {
 		this.id = id;
 		this.ip = ip;
 		this.port = port;
@@ -81,7 +90,18 @@ public class UnicastClient implements ActionListener{
 		//X(종료)를 눌렀을 때 프로그램을 종료하기 위한 코드
 		jframe.addWindowListener(new WindowAdapter() {
 			public void windowClosing(WindowEvent e) {
-				System.exit(0);
+				//System.exit(0);
+				try {
+					bw.write("shutdown\n");
+					bw.flush();
+					String readLine = br.readLine();
+					if(readLine.equals("shutdown")) {
+						close();
+						System.exit(0);
+					}
+				} catch (IOException e1) {
+					e1.printStackTrace();
+				}
 			}
 			public void windowOpened(WindowEvent e) {
 				jtf.requestFocus();
@@ -92,12 +112,32 @@ public class UnicastClient implements ActionListener{
 		jtf.addActionListener(this);
 		
 	}
-	
-	public static void main(String[] args) {
-		JFrame.setDefaultLookAndFeelDecorated(true);
-		new UnicastClient("sch930214","127.0.0.1",5000);        //id,ip,port
+	public void close() {
+		try {
+			if(bw != null) bw.close();
+			if(br != null) br.close();
+		} catch (IOException e2) {
+			
+		}
 	}
-
+	public void connect() {
+		try {
+			Socket socket = new Socket(ip,port);
+			bw = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream())); //한 줄로
+			br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+			MulticastClientThread mct = new MulticastClientThread(br,jta);
+			Thread t1 = new Thread(mct);
+			t1.start();
+		} catch (UnknownHostException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
@@ -112,28 +152,58 @@ public class UnicastClient implements ActionListener{
 				
 			}else {
 				
+				try {
+					bw.write(id+ " : " + message + "\n");
+					bw.flush();
+					
+				} catch (IOException e1) {
+					//System.out.println("서버 다이.");
+					e1.printStackTrace();
+				}
 			//텍스트 에어리어에 추가하기
-			jta.append(id+ " : " + message+"\n");
+			//jta.append(id+ " : " + message+"\n");
 			}
 			//텍스트 필드에 입력된 값 없애기
 			jtf.setText("");
 		}else if(obj == jbtn) {
 			//반응 확인용 System.out.println("action jbtn...");
 			String message = jtf.getText();
-			
-			jta.append(id+ " : " + message+"\n");
-			jtf.setText("");
-			jbtn.setEnabled(false);
-			
-			try {
-				Thread.sleep(1000);
-			} catch (InterruptedException e1) {
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
+			if(message.trim().length()==0) {
+				JOptionPane.showMessageDialog(jframe,"야...",
+						"Warning",JOptionPane.ERROR_MESSAGE);
+			}else {
+				
+				try {
+					bw.write(id+ " : " + message + "\n");
+					bw.flush();
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 			}
-			jbtn.setEnabled(true);
-			
+			jtf.setText("");
 			jtf.requestFocus();
 		}
 	}
+//			
+//			jta.append(id+ " : " + message+"\n");
+//			jtf.setText("");
+//			jbtn.setEnabled(false);
+//			jtf.requestFocus();
+//			/*
+//			try {
+//				Thread.sleep(1000);
+//			} catch (InterruptedException e1) {
+//				// TODO Auto-generated catch block
+//				e1.printStackTrace();
+//			}
+//			jbtn.setEnabled(true);
+//			*/
+//		}
+//	}
+	public static void main(String[] args) {
+		JFrame.setDefaultLookAndFeelDecorated(true);
+		new MulticastClient("houw","192.168.0.52",6000).connect();        //id,ip,port
+	}
+
 }

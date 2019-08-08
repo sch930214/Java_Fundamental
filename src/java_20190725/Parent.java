@@ -11,6 +11,7 @@ public class Parent {
 		System.out.println("Parent instance block");
 	}
 	public Parent() {
+		//super();
 		System.out.println("Parent 생성자");
 	}
 }
