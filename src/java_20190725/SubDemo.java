@@ -5,7 +5,7 @@ public class SubDemo {
 		Sub s1 = new Sub();
 		s1.makeMoney();//부모의 메서드
 		s1.gotoSchool();
-		s1.play("starcraft");//부모의 메서드를 overriding(재정의)
+		s1.play("sdfsdf");//부모의 메서드를 overriding(재정의)
 		
 		s1.money = 1000000;
 		s1.chicken = "교촌치킨2마리";

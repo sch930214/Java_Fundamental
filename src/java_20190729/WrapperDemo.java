@@ -25,6 +25,7 @@ public class WrapperDemo {
 		String s1 = "10";
 		String s2 = "20";
 		Integer i1 = Integer.valueOf(s1);
+		System.out.println(i1);
 		
 		//3. wrapper class => primitive data type으로 변환, 연산하려고.(intValue())
 		//불가능.  reference끼리 더하는 것처럼 되므로. 

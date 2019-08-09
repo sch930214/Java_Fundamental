@@ -21,6 +21,7 @@ class Car{
 		result = prime * result + ((modelNumber == null) ? 0 : modelNumber.hashCode());
 		return result;
 	}
+	
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -50,6 +51,7 @@ class Car{
 
 public class EqualsDemo {
 	public static void main(String[] args) {
+		
 		String s1 = new String("test");
 		String s2 = new String("test");
 		System.out.println(s1 == s2);
