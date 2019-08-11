@@ -14,7 +14,7 @@ public class GenericDemo {
 		for(int i=0; i<list.size();i++) {
 			//Integer temp = (Integer)list.get(i); 들어가는게 확실히 integer이므로 굳이 캐스팅 할 필요 없음.
 			Integer temp = list.get(i);																	//꼭 get을 넣어야하는가?
-			System.out.println(temp);
 		}	
+		System.out.println(list.get(2));
 	}
 }

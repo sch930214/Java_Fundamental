@@ -17,7 +17,8 @@ public class MapDemo {
 		map.put("4", 444444);
 		map.put("5", 555555);
 		map.put("1", 666666);// 키 값이 중복되면 마지막에 설정한 값이 나옴.
-	
+		//map.clear();
+		
 		//1개 출력
 		Integer value = map.get("1");     
 		System.out.println(value);
