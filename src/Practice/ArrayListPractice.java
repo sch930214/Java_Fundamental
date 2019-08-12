@@ -11,6 +11,7 @@ public class ArrayListPractice {
 		list.add("4");
 		list.add("니하오");
 		list.add("6");
+		
 
 		Desk d = new Desk();
 		d.product = "refrigerator";
