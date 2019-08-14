@@ -1,4 +1,4 @@
-package java_20190812;
+package java_20190813;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -7,13 +7,11 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-//Dao = Data Access Object
-public class MemberDao {
-	// 1.singleton 코딩
+public class DeptDao {
+	private static DeptDao single;
 
-	static {
+	private DeptDao() {
 		try {
-
 			Class.forName("org.mariadb.jdbc.Driver");
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
@@ -21,26 +19,14 @@ public class MemberDao {
 		}
 	}
 
-	private static MemberDao single;
-
-	private MemberDao() {
-		/*
-		 * try { Class.forName("org.mariadb.jdbc.Driver"); } catch
-		 * (ClassNotFoundException e) { // TODO Auto-generated catch block
-		 * e.printStackTrace(); 생성자에다가 해줘도 된다. }
-		 */
-	}
-
-	// 싱글톤은 외부에서 객체를 만들려면 무조건 getInstance - 생성자가 private이니까
-	public static MemberDao getInstance() {
+	public static DeptDao getInstance() {
 		if (single == null) {
-			single = new MemberDao();
+			single = new DeptDao();
 		}
 		return single;
 	}
 
-	// Dto = Data Transfer Object >데이터를 전달할때는 object로 전달한다.
-	public boolean insert(MemberDto m) {
+	public boolean insert(DeptDto d) {
 		Connection con = null;
 		PreparedStatement pstmt = null;
 		boolean isSuccess = false;
@@ -48,23 +34,59 @@ public class MemberDao {
 
 		try {
 			con = DriverManager.getConnection("jdbc:mariadb://localhost/kic? autoReconnect=true", "kic12", "kic12");
-			// 바인딩 변수(?)는 반드시 컬럼 값에만 설정할 수 있다.(컬럼명,테이블명,set,where 등등 전부 안됨)
 			StringBuffer sql = new StringBuffer();
-			sql.append("INSERT INTO member(num, name, addr) ");
+			sql.append("INSERT INTO dept(deptno, dname, loc) ");
 			sql.append("values(?,?,?) ");
-
 
 			pstmt = con.prepareStatement(sql.toString());
 
-			pstmt.setInt(index++, m.getNum());
-			pstmt.setString(index++, m.getName());
-			pstmt.setString(index, m.getAddr());
+			pstmt.setInt(index++, d.getNo());
+			pstmt.setString(index++, d.getName());
+			pstmt.setString(index, d.getLoc());
 
 			pstmt.executeUpdate();
 			isSuccess = true;
 
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
+			// TODO: handle exception
+			e.printStackTrace();
+		} finally {
+			try {
+				if (pstmt != null)
+					pstmt.close();
+				if (con != null)
+					con.close();
+
+			} catch (SQLException e2) {
+				// TODO: handle exception
+			}
+		}
+		return isSuccess;
+	}
+
+	public boolean update(DeptDto d) {
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		boolean isSuccess = false;
+		int index = 1;
+
+		try {
+			con = DriverManager.getConnection("jdbc:mariadb://localhost/kic? autoReconnect=true", "kic12", "kic12");
+			StringBuffer sql = new StringBuffer();
+			sql.append("UPDATE dept ");
+			sql.append("SET dname = ?,loc = ? ");
+			sql.append("where deptno = ? ");
+
+			pstmt = con.prepareStatement(sql.toString());
+
+			pstmt.setString(index++, d.getName());
+			pstmt.setString(index++, d.getLoc());
+			pstmt.setInt(index, d.getNo());
+
+			pstmt.executeUpdate();
+			isSuccess = true;
+
+		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
 			try {
@@ -78,112 +100,81 @@ public class MemberDao {
 		}
 		return isSuccess;
 	}
-	
-	public boolean update(MemberDto m) {
+
+	public boolean delete(int no) {
 		Connection con = null;
 		PreparedStatement pstmt = null;
 		boolean isSuccess = false;
 		int index = 1;
 		try {
 			con = DriverManager.getConnection("jdbc:mariadb://localhost/kic? autoReconnect=true", "kic12", "kic12");
-			// 바인딩 변수(?)는 반드시 컬럼 값에만 설정할 수 있다.
 			StringBuffer sql = new StringBuffer();
-			sql.append("UPDATE member ");
-			sql.append("SET NAME = ? , addr = ? ");
-			sql.append("WHERE num = ? ");
+			sql.append("Delete from dept ");
+			sql.append("Where deptno = ? ");
 
 			pstmt = con.prepareStatement(sql.toString());
 
-			pstmt.setString(index++, m.getName());
-			pstmt.setString(index++, m.getAddr());
-			pstmt.setInt(index, m.getNum());
-
+			pstmt.setInt(index, no);
 			pstmt.executeUpdate();
 			isSuccess = true;
+
 		} catch (SQLException e) {
-			e.printStackTrace();
-		} finally {
-			try {
-				if ( pstmt != null) pstmt.close();
-				if ( con != null) con.close();
-			} catch (SQLException e2) {
-				// TODO: handle exception
-			}
-		}
-		return isSuccess;
-	}
-
-	public boolean delete(int num) {
-		Connection con = null;
-		PreparedStatement pstmt = null;
-		boolean isSuccess = false;
-		int index = 1;
-		try {
-			con = DriverManager.getConnection("jdbc:mariadb://localhost/kic? autoReconnect=true", "kic12", "kic12");
-			// 바인딩 변수(?)는 반드시 컬럼 값에만 설정할 수 있다.
-			StringBuffer sql = new StringBuffer();
-			sql.append("DELETE FROM member ");
-			sql.append("WHERE num = ? ");
-
-			pstmt = con.prepareStatement(sql.toString());
-
-			pstmt.setInt(index, num);
-			pstmt.executeUpdate();
-			isSuccess = true;
-
-		} catch (SQLException e2) {
 			// TODO: handle exception
 		} finally {
 			try {
-				if (pstmt != null)pstmt.close();
-				if (con != null)con.close();
+				if (con != null)
+					con.close();
+				if (pstmt != null)
+					pstmt.close();
 			} catch (SQLException e2) {
 				// TODO: handle exception
 			}
 		}
 
 		return isSuccess;
-
 	}
-	
-	public ArrayList<MemberDto> select() {
+
+	public ArrayList<DeptDto> select() {
 		Connection con = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
-		ArrayList<MemberDto> list = new ArrayList<MemberDto>();
+		ArrayList<DeptDto> list = new ArrayList<DeptDto>();
 		int index = 1;
-		
+
 		try {
 			con = DriverManager.getConnection("jdbc:mariadb://localhost/kic? autoReconnect=true", "kic12", "kic12");
 			StringBuffer sql = new StringBuffer();
-			sql.append("SELECT num, NAME, addr ");
-			sql.append("FROM member; ");
-			
+			sql.append("SELECT deptno, dname, loc ");
+			sql.append("FROM dept; ");
+
 			pstmt = con.prepareStatement(sql.toString());
-			
+
 			rs = pstmt.executeQuery();
-			while(rs.next()) {
-				index = 1; //while문 두번째 들어올때 index값은 4가 되므로 while문 안에서 1로 설정
-				int num = rs.getInt(index++);
+			while (rs.next()) {
+				index = 1;
+				int no = rs.getInt(index++);
 				String name = rs.getString(index++);
-				String addr = rs.getString(index);
-				list.add(new MemberDto(num,name,addr));
+				String loc = rs.getString(index);
+				list.add(new DeptDto(no, name, loc));
 			}
-			
-			
-			
+
 		} catch (SQLException e) {
 			// TODO: handle exception
 		} finally {
 			try {
-				if(rs != null) rs.close();
-				if(pstmt != null)pstmt.close();
-				if(con != null)con.close();
+				if (rs != null)
+					rs.close();
+				if (con != null)
+					con.close();
+				if (pstmt != null)
+					pstmt.close();
+
 			} catch (SQLException e2) {
-				
+				// TODO: handle exception
 			}
 		}
+
 		return list;
 	}
-	
+
 }
