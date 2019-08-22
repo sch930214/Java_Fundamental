@@ -11,8 +11,8 @@ public class MeaningFullName {
 	int intermediateSal = 3500;
 	int advancedSal = 4500;
 	
-	grade(a.career);
-
+	a.grade(a.career);
+	//"이름"의 경력은 "몇"년으로 "등급"개발자이며, 연봉은 "얼마"이다.
 	}
 }
 
@@ -25,7 +25,7 @@ class Developer {
 		this.career = career;
 	}
 
-	public static void grade(int a) {
+	public void grade(int a) {
 		if (a < 3) {
 			System.out.println("초급");
 		} else if (a >= 3 && a < 7) {
