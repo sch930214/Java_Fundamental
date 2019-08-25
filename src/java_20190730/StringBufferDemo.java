@@ -16,7 +16,7 @@ public class StringBufferDemo {
 		
 		//문자열 뒤에 연결
 		StringBuffer sql = new StringBuffer();
-		sql.append("select name, age ");				//append는 또 뭐야 슈발..
+		sql.append("select name, age ");				
 		sql.append("from member");
 		sql.append("where name = '손정훈' " );
 		sql.append("order by name desc");
