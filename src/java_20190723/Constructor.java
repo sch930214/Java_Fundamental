@@ -22,7 +22,7 @@ public class Constructor {
 	}
 	
 	public void avg() {
-		System.out.println((a+b)/2);
+		System.out.println((a+b+d)/2);
 	}
 	
 	

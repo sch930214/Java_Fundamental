@@ -14,6 +14,7 @@ public class NoticeDto {
 		this.content = content;
 		this.regdate = regdate;
 	}
+
 	public int getNum() {
 		return num;
 	}
