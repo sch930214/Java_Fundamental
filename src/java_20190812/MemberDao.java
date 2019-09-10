@@ -132,7 +132,7 @@ public class MemberDao {
 			isSuccess = true;
 
 		} catch (SQLException e2) {
-			// TODO: handle exception
+			e2.printStackTrace();
 		} finally {
 			try {
 				if (pstmt != null)pstmt.close();

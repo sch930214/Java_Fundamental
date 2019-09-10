@@ -18,7 +18,7 @@ public class APIExamCaptchaImage {
 	        String clientId = "SRS6tlSbPSUSQk23JVOK";//애플리케이션 클라이언트 아이디값";
 	        String clientSecret = "a_i6h0A2BR";//애플리케이션 클라이언트 시크릿값";
 	        try {
-	            String key = "I90YFSc0kLoHx1ZT"; // https://openapi.naver.com/v1/captcha/nkey 호출로 받은 키값
+	            String key = "jMGypeiY2SQsMTej"; // https://openapi.naver.com/v1/captcha/nkey 호출로 받은 키값
 	            String apiURL = "https://openapi.naver.com/v1/captcha/ncaptcha.bin?key=" + key;
 	            URL url = new URL(apiURL);
 	            HttpURLConnection con = (HttpURLConnection)url.openConnection();

@@ -36,7 +36,7 @@ public class FileClient {
 			out = socket.getOutputStream();
 			osw = new OutputStreamWriter(out);
 			bw = new BufferedWriter(osw);
-			bw.write("homework_20190905.docx");
+			bw.write("amazon.pptx");
 			bw.newLine();
 			bw.flush();
 
@@ -45,7 +45,7 @@ public class FileClient {
 			in = socket.getInputStream();
 			File f = new File("c:\\dev\\test\\network");
 			f.mkdirs();
-			f = new File(f,"homework_20190905.docx");
+			f = new File(f,"amazon.pptx");
 			fos = new FileOutputStream(f);
 			byte[] readBytes = new byte[1024*8];
 			int readByteCount = 0;

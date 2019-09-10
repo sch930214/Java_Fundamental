@@ -7,6 +7,16 @@ import java.sql.SQLException;
 
 
 public class HomeworkDao {
+	
+	static {
+		try {
+
+			Class.forName("org.mariadb.jdbc.Driver");
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+	}
+	
 	private static HomeworkDao single;
 
 	private HomeworkDao() {

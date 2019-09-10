@@ -32,6 +32,6 @@ public class Main {
 			    double y = 5000;
 			    new Main().run();
 
-	  
+	
 	}
 }
